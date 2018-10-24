@@ -1,0 +1,9 @@
+  <h2>Customer List</h2>
+  
+  <div *ngFor="let customer of customerList">
+    <app-customer [id]="customer.Id" 
+                  [firstName]="customer.FirstName" 
+                  [lastName]="customer.LastName"
+                  (changed)="updateCustomer($event)">
+    </app-customer>
+  </div>
